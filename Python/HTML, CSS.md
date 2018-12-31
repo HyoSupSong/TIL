@@ -1,5 +1,5 @@
 ## Url
-###Url
+### Url
 > 애플리케이션이 리소스에 접근할 수 있는 방법
 
 ### Url의 구조
@@ -12,7 +12,7 @@
 5. '#' : 프레그먼트
 ---
 ## HTML
-> 웹 페이지를 위한 마크업 언어
+> 웹 페이지를 위한 마크업 언어(HyperText Markup Language)
 ```html
 <!doctype html>
 
@@ -80,4 +80,36 @@
         </ul>
     </body>
 </html>
+```
+#
+## CSS
+> 종속형 시트(Cascading Style Sheets)
+### HTML에 CSS를 적용시키는 방법
+Inline Style Sheet : 태그의 style 속성에 CSS코드를 넣어 적용한다.
+> 해당 태그가 선택자가 되고, CSS 코드에는 속성과 값이 들어간다.(꾸미는 데 한계가 있고, 재사용이 불가능하다)
+```html
+<p style="color:blue">inline style sheet</p>
+```
+#
+Internal Style Sheet : HTML 문서의 <style></style> 안에 CSS 코드를 넣는다.
+> 문서 안의 여러 요소를 한번에 꾸밀 수 있지만 또 다른 HTML 문서에는 적용할 수 없다.
+```html
+<style>
+    h1 {
+        color:blue;
+    }
+</style>
+```
+#
+Linking Style Sheet : 별도의 CSS 파일을 만들고 HTML 문서와 연결
+> 여러 HTML 문서에 사용할 수 있다는 장점이 있다.
+- css 파일
+```css
+h1 {
+    color:red;
+}
+```
+- html 파일
+```html
+<link rel="stylesheet" href="style.css">
 ```
